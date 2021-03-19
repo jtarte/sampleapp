@@ -1,7 +1,10 @@
-resources:
-- application.yaml
+bases:
+- github.com/jtarte/sampleapp/kube?ref=master
 - namespace.yaml
-- config_map.yaml
-- service.yaml
-- deployment.yaml
-- route.yaml
+patchesJson6902:
+  - target:
+      version: v1
+      group: route.openshift.io
+      kind: Route
+      name: sampleapp
+    path: route.yaml
