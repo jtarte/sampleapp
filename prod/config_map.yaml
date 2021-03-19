@@ -1,0 +1,3 @@
+- op: replace 
+  path: /data/App_NAME
+  value: sampleapp-prod

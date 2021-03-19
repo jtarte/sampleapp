@@ -8,3 +8,9 @@ patchesJson6902:
       kind: Route
       name: sampleapp
     path: route.yaml
+  - target:
+      group: ''
+      kind: ConfigMap
+      name: sampleapp
+      version: v1
+    path: config_map.yaml
