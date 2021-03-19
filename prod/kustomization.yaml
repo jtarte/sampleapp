@@ -7,5 +7,4 @@ patchesJson6902:
       group: route.openshift.io
       kind: Route
       name: sampleapp
-      namespace: test-app-prod
     path: route.yaml
