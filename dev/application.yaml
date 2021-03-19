@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bgdk-app
-  namespace: test-app-dev
+  name: mysample
+  namespace: argocd
 spec:
   destination:
     namespace: argocd
@@ -10,8 +10,8 @@ spec:
   project: default
   source:
     path: dev
-    repoURL: https://github.com/RedHatWorkshops/argocd-getting-started
-    targetRevision: main
+    repoURL: https://github.com/jtarte/sampleapp
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true
@@ -19,9 +19,9 @@ spec:
   sync:
     comparedTo:
       destination:
-        namespace: test-app-dev
+        namespace: argocd
         server: https://kubernetes.default.svc
       source:
         path: dev
-        repoURL: https://github.com/RedHatWorkshops/argocd-getting-started
-        targetRevision: main
+        repoURL: https://github.com/jtarte/sampleapp
+        targetRevision: master
