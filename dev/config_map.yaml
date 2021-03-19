@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: sampleapp
+  namespace: test-dev-app
 data:
   # property-like keys; each key maps to a simple value
   APP_NAME: "sample"
