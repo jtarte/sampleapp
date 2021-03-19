@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: argocd
+    namespace: test-app-prod
     server: https://kubernetes.default.svc
   project: default
   source:
@@ -19,7 +19,7 @@ spec:
   sync:
     comparedTo:
       destination:
-        namespace: argocd
+        namespace: test-app-prod
         server: https://kubernetes.default.svc
       source:
         path: dev

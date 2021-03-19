@@ -5,7 +5,6 @@ metadata:
   name: sampleapp
   labels:
     app: sampleapp
-  namespace: test-app-dev
 spec:
   ports:
    - port: 80

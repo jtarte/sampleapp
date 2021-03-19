@@ -4,10 +4,9 @@ metadata:
   name: sampleapp
   labels:
     app: sampleapp
-  namespace: test-app-dev
 spec:
   host: >-
-    sampleapp-test-app-dev.mycluster-fra02-c3c-16x16-eba6071379d98d950bd3c79153349ac8-0000.eu-de.containers.appdomain.cloud
+    sampleapp-test-app-prod.mycluster-fra02-c3c-16x16-eba6071379d98d950bd3c79153349ac8-0000.eu-de.containers.appdomain.cloud
   to:
     kind: Service
     name: sampleapp

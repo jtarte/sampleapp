@@ -5,7 +5,6 @@ metadata:
   name: sampleapp
   labels:
     purpose: sample
-  namespace: test-app-dev
 spec:
   selector:
     matchLabels:
