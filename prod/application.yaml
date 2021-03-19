@@ -5,11 +5,11 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: test-app-dev
+    namespace: test-app-prod
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: dev
+    path: prod
     repoURL: https://github.com/jtarte/sampleapp
     targetRevision: master
   syncPolicy:
@@ -19,9 +19,9 @@ spec:
   sync:
     comparedTo:
       destination:
-        namespace: test-app-dev
+        namespace: test-app-prod
         server: https://kubernetes.default.svc
       source:
-        path: dev
+        path: prod
         repoURL: https://github.com/jtarte/sampleapp
         targetRevision: master

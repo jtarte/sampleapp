@@ -1,0 +1,3 @@
+bases:
+- github.com/jtarte/sampleapp/prod?ref=master
+- namespace.yaml
