@@ -3,10 +3,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sampleapp
-  namespace: argocd
   labels:
     app: sampleapp
-  namespace: test-dev-app
+  namespace: test-app-dev
 spec:
   ports:
    - port: 80
