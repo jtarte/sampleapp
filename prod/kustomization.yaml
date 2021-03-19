@@ -1,3 +1,11 @@
 bases:
 - github.com/jtarte/sampleapp/kube?ref=master
 - namespace.yaml
+patchesJson6902:
+  - target:
+      version: v1
+      group: apps
+      kind: Route
+      name: sampleapp
+      namespace: test-app-prod
+    path: route.yaml
