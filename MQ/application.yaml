@@ -15,8 +15,6 @@ spec:
     repoURL: https://github.com/jtarte/sampleapp
     targetRevision: master
   syncPolicy:
-    syncOptions:
-    - Replace=true
     automated:
       prune: true
       selfHeal: true
