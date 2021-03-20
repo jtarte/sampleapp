@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mysample-prod
+  name: mysample-mq
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: test-app-prod
+    namespace: mq-test
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: prod
+    path: MQ
     repoURL: https://github.com/jtarte/sampleapp
     targetRevision: master
   syncPolicy:
@@ -21,9 +21,9 @@ spec:
   sync:
     comparedTo:
       destination:
-        namespace: test-app-prod
+        namespace: mq-test
         server: https://kubernetes.default.svc
       source:
-        path: prod
+        path: MQ
         repoURL: https://github.com/jtarte/sampleapp
         targetRevision: master
