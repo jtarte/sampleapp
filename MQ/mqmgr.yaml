@@ -3,7 +3,7 @@ kind: QueueManager
 metadata:
   name: mqsc-ini-cp4i
 spec:
-  version: 9.2.0.0-r1
+  version: 9.2.1.0-r1
   license:
     accept: true
     license: L-RJON-BUVMQX
