@@ -3,13 +3,20 @@ kind: QueueManager
 metadata:
   name: mqsc-ini-cp4i
 spec:
-  version: 9.2.0.1-r1-eus
+  version: 9.2.0.1-r1
   license:
     accept: true
     license: L-RJON-BUVMQX
     use: NonProduction
   web:
     enabled: true
+  template:
+    pod:
+      containers:
+        - env:
+            - name: MQSNOAUT
+              value: 'yes'
+          name: qmgr
   queueManager:
     name: "MQSCINI"
     mqsc:
