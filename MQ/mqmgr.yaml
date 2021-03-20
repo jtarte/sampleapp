@@ -2,6 +2,8 @@ apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
   name: mqsc-ini-cp4i
+  labels:
+    version: 0.0.2
 spec:
   version: 9.2.1.0-r1
   license:
